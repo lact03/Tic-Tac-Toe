@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tic Tac Toe</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <main>
+            <div id="home">
+                <div>
+                    <div>
+                        <input
+                            id="single-player"
+                            type="radio"
+                            name="mode"
+                            value="singleplayer"
+                            checked
+                        />
+                        <label for="single-player">Single Player</label>
+                        <input
+                            id="multiplayer"
+                            type="radio"
+                            name="mode"
+                            value="multiplayer"
+                        />
+                        <label for="multiplayer">Multiplayer</label>
+                    </div>
+                    <input
+                        id="player-1-input"
+                        type="text"
+                        placeholder="Player 1 Name"
+                    />
+                    <input
+                        id="player-2-input"
+                        type="text"
+                        placeholder="Player 2 Name"
+                    />
+                    <button id="start-game">Start Game</button>
+                </div>
+            </div>
+            <div id="game">
+                <div class="heading">
+                    <div>
+                        <button id="quit">Quit</button>
+                        <button id="restart">Restart</button>
+                    </div>
+                    <h1>Tic Tac Toe</h1>
+
+                    <div>
+                        <h3 id="player-1" class="animation">Player 1</h3>
+                        <h3 id="player-2">Player 2</h3>
+                    </div>
+                </div>
+                <div class="box-parent">
+                    <div id="box-container" class="box-container">
+                        <div id="box-1"></div>
+                        <div id="box-2"></div>
+                        <div id="box-3"></div>
+                        <div id="box-4"></div>
+                        <div id="box-5"></div>
+                        <div id="box-6"></div>
+                        <div id="box-7"></div>
+                        <div id="box-8"></div>
+                        <div id="box-9"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="main.js"></script>
+    </body>
+</html>
