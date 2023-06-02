@@ -6,12 +6,20 @@
         "Lucida Sans", Arial, sans-serif;
 }
 
+#home.d-none {
+    display: none;
+}
+
 #game {
     width: 100%;
     height: 100dvh;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 30% 70%;
+}
+
+#game.d-none {
+    display: none;
 }
 
 div {
@@ -51,12 +59,14 @@ h3.animation {
 div.box-parent {
     display: flex;
     justify-content: center;
+    align-items: center;
     height: 100%;
-    max-height: 100%;
 }
 
 div.box-container {
     background: whitesmoke;
+    height: 375px;
+    width: 375px;
     display: grid;
     grid-template-columns: repeat(3, 33.33333%);
     grid-template-rows: repeat(3, 33.33333%);
@@ -66,4 +76,30 @@ div.box-container div {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#pop-up.d-none {
+    display: none;
+}
+
+#pop-up {
+    width: 100%;
+    height: 100dvh;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pop-up > div {
+    background: whitesmoke;
+    border-radius: 5px;
+    height: 200px;
+    width: 300px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
