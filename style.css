@@ -6,8 +6,33 @@
         "Lucida Sans", Arial, sans-serif;
 }
 
+body {
+    background: #212121;
+}
+
 #home.d-none {
     display: none;
+}
+
+/* div {
+    border: 1px solid black;
+} */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100dvh;
+    font-size: 1.5rem;
+    color: white;
+}
+
+#home > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    width: 100%;
 }
 
 #game {
@@ -16,14 +41,11 @@
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 30% 70%;
+    color: white;
 }
 
 #game.d-none {
     display: none;
-}
-
-div {
-    border: 1px solid black;
 }
 
 div.heading {
@@ -35,6 +57,8 @@ div.heading {
 button {
     padding: 5px;
     margin: 5px;
+    color: white;
+    background: #444;
 }
 
 h1 {
@@ -50,7 +74,7 @@ div.heading > div:nth-child(3) {
 }
 
 h3.animation {
-    background: linear-gradient(red, whitesmoke);
+    background: linear-gradient(red, #444);
     padding: 10px;
     margin: 10px 0;
     border-radius: 20px;
@@ -64,7 +88,7 @@ div.box-parent {
 }
 
 div.box-container {
-    background: whitesmoke;
+    border-radius: 5px;
     height: 375px;
     width: 375px;
     display: grid;
@@ -76,6 +100,7 @@ div.box-container div {
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid white;
 }
 
 #pop-up.d-none {
@@ -85,21 +110,32 @@ div.box-container div {
 #pop-up {
     width: 100%;
     height: 100dvh;
-    z-index: 9999;
-    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #pop-up > div {
-    background: whitesmoke;
+    position: absolute;
+    background-color: white;
+    height: 150px;
+    width: 250px;
     border-radius: 5px;
-    height: 200px;
-    width: 300px;
-    padding: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    transform: scale(0);
+}
+
+#pop-up > div.support-scale {
+    transition: transform 0.3s ease-out;
+}
+
+#pop-up > div.scale-up {
+    transform: scale(1);
 }
